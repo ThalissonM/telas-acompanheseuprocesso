@@ -1,0 +1,63 @@
+
+body {
+    background-color: #F5F7FF;
+    font-family: Poppins, sans-serif;
+}
+
+.nav-link.active {
+    background-color: #EDEDFC !important;
+    color: #4F50E3 !important;
+    border-radius: 1rem;
+}
+
+.border-right {
+    border-right: 1px solid #F5F5F5;
+}
+.form-control {
+    border-radius: 2rem !important;
+    background-color: #F5F5F5 !important;
+    
+    /* Add other styles if necessary to ensure visibility */
+}
+
+.btn-primary {
+    background-color: #F15921;
+    
+    color: white;
+    border-width: 0cap;
+    border-radius: 2rem;
+}
+.btn-primary:hover {
+    background-color: #D1481B;
+}
+
+.btn-light {
+
+    border-color: dimgray;
+    border-radius: 2rem;
+}
+.btn {
+
+    border-radius: 2rem;
+}
+.form-select {
+    border-radius: 2rem !important;
+    background-color: #F5F5F5 !important;
+    
+    /* Add other styles if necessary to ensure visibility */
+}
+
+
+body, html {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Ensures footer stays at bottom */
+}
+/* Make main content area grow to fill available space */
+.content-wrapper {
+    flex: 1;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Acompanhe seu processso</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
+    <!-- <link href="/assets/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" /> -->
+    <link href="/assets/fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet" />
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    <!-- Conteúdo -->
+    <div class="container bg-white rounded shadow-sm mt-5">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <div class="col-lg-6 col-md-6 col-12 my-3">
+                
+                <!-- Login Form -->
+                 <div class="row">
+                    
+                    <div class="col-auto mt-3 my-3 ms-3">
+                        <img src="assets/svg/logo_login.svg" alt="">
+                        <!-- <img src="assets/img/logo-mini.png" alt=""> -->
+                    </div>
+                    
+                 </div>
+                <div class="row align-items-center justify-content-center">
+                    
+                    <div class="col-8 col-lg-8 col-md-8 mt-5 mx-auto align-items-center justify-content-center">
+                        
+                            <div class="mb-3 mt-5">
+                                <h4>Seu periodo de Teste Grátis chegou ao fim</h4>
+                                <span>Para continuar usufruindo dos benefícios do Acompanhe Seu Processo, assine o plano mais adequado as suas necessidades <a href="/planos" style="color: #F15921; text-decoration: none;">neste link</a></span>
+                            </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 d-none d-md-block p-0">
+                <img src="/assets/img/login.png" class="img-fluid w-100 h-100 rounded-end" alt="Login Image">
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+
+
+
+</body>
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-3 mt-auto">
+    <div class="container d-flex justify-content-between">
+        <p class="mb-0">© 2024 Agile Serviços. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById('password');
+        const togglePasswordIcon = document.getElementById('togglePasswordIcon');
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            togglePasswordIcon.classList.remove('fa-eye');
+            togglePasswordIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = 'password';
+            togglePasswordIcon.classList.remove('fa-eye-slash');
+            togglePasswordIcon.classList.add('fa-eye');
+        }
+    }
+</script>
+</html>
+
