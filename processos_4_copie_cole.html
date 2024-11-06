@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos | Acompanhe seu processso</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- <link href="/assets/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" /> -->
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet" />
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <div class="content-wrapper">
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/svg/logo_asp.svg" alt="" width="275" height="30"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Planos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Processos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://i.pinimg.com/originals/05/51/f5/0551f506725ac1deeaa85d46f8b9a5fd.jpg"
+                                    alt="Profile" class="rounded-circle" width="30" height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Alertas -->
+        <div class="container my-3">
+            <div class="alert alert-primary py-1" role="alert" style="font-size: 0.875rem;">
+                <strong>Atenção</strong>: Seu periodo de teste expira em 11 dias.
+            </div>
+        </div>
+
+        <div class="container">
+            <h2> Processos</h2>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="container bg-white rounded-4 shadow-sm">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-2 col-md-3 col-12 my-3 mt-5 border-right">
+                    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" href="#"><strong>Cadastro de processos</strong></a>
+                        <div class="ms-3">
+                            <a class="nav-link text-muted" href="#" >Manual</a>
+                            <a class="nav-link active submenu" href="#"><strong>Copie e Cole</strong></a>
+                        </div>
+                        <a class="nav-link text-black" href="seguranca.html">Gerenciador de processos</a>
+                        <a class="nav-link text-black" href="#">Painel de processos</a>
+                        <a class="nav-link text-black" href="#">Filtrar movimentações</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-10 col-md-9 col-12 p-5">
+                    <div class="row m-3">
+                        <h4>Cadastro de processos</h4>
+                    </div>
+
+
+                    
+                    <div class="row col-12 m-3 ms-auto p-3 position-relative align-items-start"
+                        id="profile-edit">
+
+                        
+
+                        <div
+                            class="col-lg-12 col-md-12 col-12 d-flex align-items-center justify-content-start mb-3 mb-md-0 rounded-4 shadow-sm border">
+                            <div class="w-100">
+                                <div class="row rounded-top p-3 text-white" style="background-color: #8139FF;">
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/img/copiacola.png" alt="" style="width: 50px; height: auto; margin-right: 10px;">
+                                        <div>
+                                            <strong>COPIE E COLE</strong>
+                                            <small>lista vários processos de uma vez a partir de uma lista de n°s CNJ colados no campo de busca.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-3 " style="background-color: #F1F1F1;">
+                                    <div class="mx-5">
+                                        <strong>Nota:</strong> O(s) processo(s) deve(rão) ser colados(s) no formato 999999-99.9999.9.99.9999
+                                    </div>
+                                    
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-md-12 col-12 position-relative">
+                                        <span>Adicione um ou mais números de processo, colocando cada número de processo em uma linha.</span>
+                                    </div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-md-12 col-12 position-relative">
+                                        <form action="#" method="post">
+                                            <div class="mb-3 d-flex col-6 align-items-start">
+                                                <textarea class="form-control me-2" id="processo" name="processo" placeholder="N° CNJ" rows="10" required>
+                                                    </textarea>
+                                                <button type="submit" class="btn btn-light">Buscar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-3 mt-5">
+    <div class="container d-flex justify-content-between">
+        <p class="mb-0">© 2024 Agile Serviços. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-whatsapp"></i></a>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+</html>

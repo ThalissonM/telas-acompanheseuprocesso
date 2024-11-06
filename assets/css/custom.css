@@ -9,6 +9,11 @@ body {
     color: #4F50E3 !important;
     border-radius: 1rem;
 }
+.nav-link.active.submenu {
+    background-color: #ffffff !important;
+    color: #4F50E3 !important;
+    border-radius: 1rem;
+}
 
 .border-right {
     border-right: 1px solid #F5F5F5;
