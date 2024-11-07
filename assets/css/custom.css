@@ -61,8 +61,33 @@ body, html {
 
 footer {
     margin-top: auto; /* Ensures footer stays at bottom */
+    font-size: 0.8rem;
 }
 /* Make main content area grow to fill available space */
 .content-wrapper {
     flex: 1;
+}
+.nav-item {
+    font-size: 0.9rem;
+    font-weight: bold;
+    
+    margin-right: 1rem;
+
+}
+
+
+@media (min-width: 1200px) {
+    .container-small {
+        width: 1200px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+.fa-brands {
+    font-size: 1.5rem;
 }
