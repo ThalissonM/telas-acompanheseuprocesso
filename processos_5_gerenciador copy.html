@@ -286,23 +286,6 @@
                                                     serverSide: true,
                                                     searching: false,
                                                     lengthChange: false,
-                                                    responsive: true,
-                                                    responsive: {
-                                                        details: {
-                                                            display: $.fn.dataTable.Responsive.display.childRowImmediate,
-                                                            type: ''
-                                                        },
-                                                        breakpoints: [
-                                                            { name: 'desktop', width: Infinity },
-                                                            { name: 'tablet', width: 1024 },
-                                                            { name: 'fablet', width: 768 },
-                                                            { name: 'phone', width: 480 }
-                                                        ],
-                                                        columns: [
-                                                            { responsivePriority: 1, targets: 0 },
-                                                            { responsivePriority: 2, targets: 2 }
-                                                        ]
-                                                    },
                                                     ajax: {
                                                         url: 'assets/processos.json',
                                                         type: 'GET',
@@ -366,10 +349,7 @@
                                                     pagingType: "simple_numbers",
                                                     info: false,  // Hides the "Showing X to Y of Z entries" text
                                                     dom: "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-12 d-flex justify-content-center'p>>",
-                                                    // columnDefs: [
-                                                    //     { "targets": "_all", "className": "text-nowrap" }
-                                                    // ],
-                                                    // scrollX: true
+                                                    
                                                     
                                                      
                                                 
