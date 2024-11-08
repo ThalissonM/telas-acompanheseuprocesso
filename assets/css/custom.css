@@ -99,3 +99,50 @@ footer {
     margin: 0;
     padding: 0;
 }
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* Style all pagination buttons with basic styles */
+.dataTables_paginate .paginate_button {
+    background-color: #007bff;  /* Button color */
+    color: white;
+    border: none;
+    margin: 0 5px;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+/* Style the Previous button with rounded left edge */
+.dataTables_paginate .paginate_button.previous {
+    border-radius: 15px 0 0 15px; /* Rounded left edge for half-circle effect */
+}
+
+/* Style the Next button with rounded right edge */
+.dataTables_paginate .paginate_button.next {
+    border-radius: 0 15px 15px 0; /* Rounded right edge for half-circle effect */
+}
+
+/* Change button color on hover */
+.dataTables_paginate .paginate_button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the active page button to make it distinct */
+.dataTables_paginate .paginate_button.current {
+    background-color: #0056b3; /* Active button color */
+    color: white;
+}
+td .form-check-input:checked {
+    background-color: #28a745 !important; /* Green color */
+    border-color: #28a745 !important; /* Green color */
+}
+
+td .form-check-input {
+    background-color: #e9ecef; /* Optional: Customize unchecked color */
+}
+
