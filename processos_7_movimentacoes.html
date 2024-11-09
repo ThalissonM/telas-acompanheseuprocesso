@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos | Acompanhe seu processso</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- <link href="/assets/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" /> -->
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet" />
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/fixedcolumns/5.0.4/css/fixedColumns.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/5.0.4/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.js"></script>
+
+    <style>
+        .btn-primary {
+            background-color: #0d6efd !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b59cf !important;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <div class="content-wrapper">
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black mb-5">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/svg/logo_asp.svg" alt="" width="275" height="30"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Planos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Processos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://i.pinimg.com/originals/05/51/f5/0551f506725ac1deeaa85d46f8b9a5fd.jpg"
+                                    alt="Profile" class="rounded-circle" width="30" height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Alertas -->
+        <div class="container my-3 mb-5">
+            <div class="alert alert-primary alert-dismissible fade show py-1" role="alert" style="font-size: 0.875rem;">
+                <button type="button" class="btn-close btn-sm" style="top: -12px;" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                <strong>Atenção</strong>: Seu periodo de teste expira em 11 dias.
+            </div>
+        </div>
+
+        <div class="container mb-3">
+            <h2> Processos</h2>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="container bg-white rounded-4 shadow-sm">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-2 col-md-3 col-12 my-3 mt-5 border-right">
+                    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link text-black" href="processos_1.html">Cadastro de processos</a>
+                        <div class="ms-3">
+                            <a class="nav-link text-muted" href="#">Manual</a>
+                            <a class="nav-link text-muted" href="processos_4_copie_cole.html">Copie e Cole</a>
+                        </div>
+                        <a class="nav-link text-black" href="processos_5_gerenciador.html">Gerenciador de processos</a>
+                        <a class="nav-link text-black" href="processos_6_painel.html">Painel de processos</a>
+                        <a class="nav-link active" href="#"><strong>Filtrar movimentações</strong></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-10 col-md-9 col-12 p-5">
+
+                    <div class="row m-3">
+                        <h4>Filtrar Movimentações</h4>
+                    </div>
+
+
+
+                    <div class="row col-12 m-3 ms-auto p-3 position-relative align-items-start" id="profile-edit">
+
+                        <div
+                            class="col-lg-12 col-md-12 col-12 d-flex align-items-center justify-content-start mb-3 mb-md-0 rounded-4 border">
+                            <div class="w-100">
+                                <div class="row rounded-top p-3" style="background-color: #F1F1F1;">
+                                    <div class="d-flex align-items-center">
+
+                                        <div>
+                                            <p>
+                                                Escolha as movimentações processuais sobre as quais deseja ser
+                                                notificado por palavras-chave. Por exemplo, ao cadastrar "Comunicação
+                                                eletrônica recebida", você receberá notificações sempre que houver essa
+                                                movimentação nos seus processos.
+
+                                            </p>
+                                            <p>
+                                                <strong>Mas atenção:</strong> se uma palavra- chave nao for cadastrada,
+                                                voce nao recebera essa notificaçao
+
+                                            </p>
+                                            <p>
+                                                Em breve, será possível consultar todas as movimentações no site, na
+                                                nova "Lista de Processos'
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-12">
+                                        Marque as principais palavras chaves utilizadas como filtro para as
+                                        movimentações processuais que deseja
+                                        receber ou digite as suas próprias expressões
+                                    </div>
+                                    <div class="col-12">
+                                        <h5>
+                                            Principais palavras-chaves
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-1" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Citação"><small>Citação</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-1" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Embargos Infringentes"><small>Embargos
+                                                Infringentes</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Proferido despacho de meto expediente"><small>Proferido
+                                                despacho de mero expediente</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Concluso"><small>Concluso</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Embargos para declaração"><small>Embargos para
+                                                declaração</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Redistribuído"><small>Redistribuído</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Decisão"><small>Decisão</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Expedição de ofício"><small>Expedição de
+                                                ofício</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Sentença"><small>Sentença</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Decisão Interlocutória"><small>Decisão
+                                                Interlocutória</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Expedida/Certificada a intimação eletrônica"><small>Expedida/Certificada
+                                                a intimação eletrônica</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Transito em Julgado"><small>Transito em
+                                                Julgado</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Despacho"><small>Despacho</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Intimação"><small>Intimação</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-light keyword-button"
+                                            data-keyword="Tutela Provisória"><small>Tutela Provisória</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Distribuído"><small>Distribuído</small></button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-2" style="white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary keyword-button"
+                                            data-keyword="Petição"><small>Petição</small></button>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="row p-3 mt-3">
+                                    <div class=" col-12 col-lg-12">
+                                        <h5>Digite suas palavras chave</h5>
+                                    </div>
+
+                                </div>
+                                <div class="row p-3 mb-5 mt-2">
+                                    <div class="col-12 col-lg-4 position-relative">
+                                        <input type="text" class="form-control" id="new_keyword"
+                                            placeholder="Palavra-chave">
+                                    </div>
+                                    <div class="col-12 col-lg-2 position-relative">
+                                        <button class="btn btn-light" id="btn_new_keyword">adicionar</button>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row rounded-4 border m-3 pb-4 pt-3 mb-5">
+                                    <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Citação"
+                                        style="white-space: nowrap; width: fit-content;"><small>Citação <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                    <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Embargos Infringentes"
+                                        style="white-space: nowrap; width: fit-content;"><small>Embargos Infringentes <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                    <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Proferido despacho de mero expediente"
+                                        style="white-space: nowrap; width: fit-content;"><small>Proferido despacho de
+                                            mero expediente <i class="fa-solid fa-circle-xmark"></i></small></button>
+                                    <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Petição"
+                                        style="white-space: nowrap; width: fit-content;"><small>Petição <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                    <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Concluso"
+                                        style="white-space: nowrap; width: fit-content;"><small>Concluso <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                                <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Embargos para declaração"
+                                        style="white-space: nowrap; width: fit-content;"><small>Embargos para declaração <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                                <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                        data-keyword="Redistribuído"
+                                        style="white-space: nowrap; width: fit-content;"><small>Redistribuído <i
+                                                class="fa-solid fa-circle-xmark"></i></small></button>
+                                            <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                                data-keyword="Decisão"
+                                                style="white-space: nowrap; width: fit-content;"><small>Decisão <i class="fa-solid fa-circle-xmark"></i></small></button>
+                                            <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                                data-keyword="Intimação"
+                                                style="white-space: nowrap; width: fit-content;"><small>Intimação <i class="fa-solid fa-circle-xmark"></i></small></button>
+                                            <button class="btn btn-sm btn-warning custom-keyword-button m-2 text-white"
+                                                data-keyword="Distribuído"
+                                                style="white-space: nowrap; width: fit-content;"><small>Distribuído <i class="fa-solid fa-circle-xmark"></i></small></button>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    $('.custom-keyword-button').on('click', function () {
+                                                        var $button = $(this);
+                                                        var keyword = $button.data('keyword');
+
+                                                        $.ajax({
+                                                            url: 'your-endpoint-url',
+                                                            type: 'POST',
+                                                            data: { keyword: keyword },
+                                                            success: function (response) {
+                                                                $button.remove();
+                                                            },
+                                                            error: function (xhr, status, error) {
+                                                                console.error('Error:', error);
+                                                                $button.remove(); // remover em producao
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            </script>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('.keyword-button').on('click', function () {
+                var $badge = $(this);
+                var keyword = $badge.data('keyword');
+                var newClass = $badge.hasClass('btn-primary') ? 'btn-light' : 'btn-primary';
+                var oldClass = $badge.hasClass('btn-primary') ? 'btn-primary' : 'btn-light';
+
+                $.ajax({
+                    url: 'your-endpoint-url',
+                    type: 'POST',
+                    data: { keyword: keyword },
+                    success: function (response) {
+                        $badge.removeClass(oldClass).addClass(newClass);
+                    },
+                    error: function (xhr, status, error) {
+                        $badge.removeClass(oldClass).addClass(newClass);//remover em producao
+                        console.error('Error:', error);
+                    }
+                });
+            });
+            $('#btn_new_keyword').on('click', function () {
+                var keyword = $('#new_keyword').val();
+                if (keyword) {
+                    $.ajax({
+                        url: 'your-endpoint-url',
+                        type: 'POST',
+                        data: { keyword: keyword },
+                        success: function (response) {
+                            location.reload();
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Error:', error);
+                            location.reload(); // remover em produção
+                        }
+                    });
+                }
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-3 mt-5">
+    <div class="container d-flex justify-content-between">
+        <p class="mb-0">© 2024 Agile Serviços. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="#" class="text-white me-2"><i class="fa-brands fa-square-whatsapp"></i></a>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+</html>
