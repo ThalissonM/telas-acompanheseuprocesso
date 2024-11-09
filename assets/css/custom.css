@@ -145,5 +145,10 @@ td .form-check-input:checked {
 td .form-check-input {
     background-color: #e9ecef; /* Optional: Customize unchecked color */
 }
-
+#processTable {
+    width: 100% !important;
+}
+#processTable thead th {
+    width: auto !important;
+}
 

@@ -18,10 +18,22 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.datatables.net/v/bs5/dt-2.1.8/r-3.0.3/sb-1.8.1/datatables.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.datatables.net/v/bs5/dt-2.1.8/r-3.0.3/sb-1.8.1/datatables.min.css" rel="stylesheet">
  
     <script src="https://cdn.datatables.net/v/bs5/dt-2.1.8/r-3.0.3/sb-1.8.1/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script> -->
 
+
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/fixedcolumns/5.0.4/css/fixedColumns.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/5.0.4/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.js"></script>
 
 </head>
 
@@ -61,7 +73,8 @@
         <!-- Alertas -->
         <div class="container my-3 mb-5">
             <div class="alert alert-primary alert-dismissible fade show py-1" role="alert" style="font-size: 0.875rem;">
-                <button type="button" class="btn-close btn-sm" style="top: -12px;" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-sm" style="top: -12px;" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
                 <strong>Atenção</strong>: Seu periodo de teste expira em 11 dias.
             </div>
         </div>
@@ -88,7 +101,7 @@
                 </div>
 
                 <div class="col-lg-10 col-md-9 col-12 p-5">
-                    
+
 
 
 
@@ -97,27 +110,34 @@
 
 
                         <div
-                            class="col-lg-12 col-md-12 col-12 d-flex align-items-center justify-content-start mb-3 mb-md-0 rounded-4 shadow-sm border">
+                            class="col-lg-12 col-md-12 col-12 d-flex align-items-center justify-content-start mb-3 mb-md-0 ">
                             <div class="w-100">
-                                <div class="row m-3">
-                                    <div class="col col-5 col-lg-5 p-3">
-                                        <div class="row mb-4">
-                                            <h5>Gerenciador de Processos</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mb-3 d-flex col-12 align-items-start">
-                                                <input type="search" class="form-control me-2"
-                                                    placeholder="Buscar processo" name="search" id="search">
-                                                <button class="btn btn-light" id="search_button">Buscar</button>
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 col-sm-12">
+                                        <div class="row pe-2">
+                                            <div class="col-12 mt-4 mb-3">
+                                                <h5>Gerenciador de Processos</h5>
                                             </div>
+                                            <div class="col-12 col-lg-8 col-sm-12 mt-5">
+                                                <input type="search" class="form-control me-2"
+                                                        placeholder="Buscar processo" name="search" id="search">
+    
+                                            </div>
+                                            <div class="col-12 col-lg-4 col-sm-12 mt-5">
+                                                <button class="btn btn-light" id="search_button" style="width: 100%;">Buscar</button>
+                                            </div>
+
                                         </div>
+                                        
+                                            
+                                        
                                     </div>
-                                    <div class="col col-7 col-lg-7 rounded-4 border align-items-start p-4 pt-4">
+                                    <div class="col-12 col-lg-7 col-sm-12 rounded-4 border align-items-start p-4 mt-3">
                                         <div class="row">
-                                            <div class="col col-6 col-md-6">
+                                            <div class="col col-12 col-md-6 col-lg-6">
                                                 <div class="row">
                                                     <div>
-                                                        <small>Plano </small><span style="color: green;">Teste
+                                                        <small>Plano </small><span style="color: green; font-size: 1.3rem;">Teste
                                                             Gratis</span>
                                                     </div>
 
@@ -128,7 +148,7 @@
 
                                             </div>
 
-                                            <div class="col col-6 col-md-6">
+                                            <div class="col col-12 col-md-6 col-lg-6">
                                                 <div>
                                                     Precisa de mais cotas? <a href="#" class="btn btn-light"
                                                         style="border-color: #F15921; color: #F15921;">Clique aqui</a>
@@ -146,9 +166,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row m-3">
-                                    <div class="col-4">
+                                
+                                
+                                    <div class="col-12 col-lg-4 col-sm-12 pt-4">
                                         <label for="filtro_status">Status</label>
                                         <select name="filtro_status" class="form-control" id="filtro_status">
                                             <option value="Todos" selected>Todos</option>
@@ -157,7 +177,7 @@
                                             <option value="Manutenção">Manutenção</option>
                                         </select>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-12 col-lg-4 col-sm-12 pt-4">
                                         <label for="filtro_origem">Origem</label>
                                         <select name="filtro_origem" class="form-control" id="filtro_origem">
                                             <option value="Todos" selected>Todos</option>
@@ -166,7 +186,7 @@
                                             <option value="Manutenção">Manutenção</option>
                                         </select>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-12 col-lg-4 col-sm-12 pt-4">
                                         <label for="filtro_tribunal">Tribunal</label>
                                         <select name="filtro_tribunal" class="form-control" id="filtro_tribunal">
                                             <option value="Todos" selected>Todos</option>
@@ -175,9 +195,9 @@
                                             <option value="Manutenção">Manutenção</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row m-3 align-items-start">
-                                    <div class="col-12">
+                                
+                                
+                                    <div class="col-12 pt-4">
                                         <button class="btn btn-light" id="excluir" style="width: auto;">Excluir <i
                                                 class="fa-regular fa-trash-can"></i></button>
 
@@ -185,7 +205,7 @@
                                     </div>
 
                                 </div>
-                                <div class="row m-3" style="font-size: 0.8rem;">
+                                <div class="row mt-5" style="font-size: 0.8rem;">
                                     <div class="col col-12">
                                         <div class="table-responsive">
                                             <table id="processTable" class="table">
@@ -197,8 +217,8 @@
                                                         <th id="monitoracao">Monitoração</th>
                                                         <th id="status">Status</th>
                                                         <th id="origem">Origem</th>
-                                                        <th id="ultima_atualizacao">Ultima Atualização</th>
-                                                        <th id="ultimo_andamento">Ultimo Andamento</th>
+                                                        <th id="ultima_atualizacao" style="white-space: nowrap;">Última Atualização</th>
+                                                        <th id="ultimo_andamento" style="white-space: nowrap;">Último Andamento</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -281,103 +301,98 @@
                                             var status = $('#filtro_status').val();
                                             var origem = $('#filtro_origem').val();
                                             var tribunal = $('#filtro_tribunal').val();
-                                            var table = $('#processTable').DataTable(
-                                                {
-                                                    serverSide: true,
-                                                    searching: false,
-                                                    lengthChange: false,
-                                                    responsive: true,
-                                                    responsive: {
-                                                        details: {
-                                                            display: $.fn.dataTable.Responsive.display.childRowImmediate,
-                                                            type: ''
-                                                        },
-                                                        breakpoints: [
-                                                            { name: 'desktop', width: Infinity },
-                                                            { name: 'tablet', width: 1024 },
-                                                            { name: 'fablet', width: 768 },
-                                                            { name: 'phone', width: 480 }
-                                                        ],
-                                                        columns: [
-                                                            { responsivePriority: 1, targets: 0 },
-                                                            { responsivePriority: 2, targets: 2 }
-                                                        ]
-                                                    },
-                                                    columnDefs: [
-                                                        { orderable: false, targets: '_all' }
-                                                    ],
-                                                    ajax: {
-                                                        url: 'assets/processos.json',
-                                                        type: 'GET',
-                                                        data: function (d) {
-                                                            d.search = search;
-                                                            d.status = status;
-                                                            d.origem = origem;
-                                                            d.tribunal = tribunal;
-                                                            delete d.columns;
-                                                        }
-                                                    },
-                                                    language: {
-                                                        url: "assets/js/datatables_pt_br.json"
-                                                    },
-                                                    // dom: 'lrtip',
-                                                    columns: [
-                                                        {
-                                                            data: null, render: function (data, type, row) {
-                                                                return '<input type="checkbox" id="selectProcess" name="selectProcess">';
-                                                            }
-                                                        },
-                                                        { 
-                                                            data: 'tribunal' },
-                                                        { data: 'processo' },
-                                                        {
-                                                            data: 'monitoracao', render: function (data, type, row) {
-                                                                return '<div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="monitoringSwitch1" ' + (data ? 'checked' : '') + '><label class="form-check-label" for="monitoringSwitch1"></label></div>';
-                                                            }
-                                                        },
-                                                        {
-                                                            data: 'status', render: function (data, type, row) {
-                                                                return '<span class="badge rounded-pill bg-' + (data == 'Ativo' ? 'primary' : (data == 'Atualizando' ? 'warning' : 'danger')) + '">' + data + '</span>';
-                                                            }
-                                                        },
-                                                        {
-                                                            data: 'origem', render: function (data, type, row) {
-                                                                if (data == 'Manual')
-                                                            {
-                                                                return '<img src="assets/img/manual_mini.png" alt="Manual Icon" width="20" height="20">' + data;
-                                                            }
-                                                            else{
-                                                                return '<img src="assets/img/automatico_mini.png" alt="Automatico Icon" width="20" height="20">' + data;
-                                                            }
-                                                                
-                                                            }
-                                                        },
 
-                                                        {
-                                                            data: 'ultima_atualizacao', render: function (data, type, row) {
-                                                                var date = new Date(data);
-                                                                return date.toLocaleDateString('pt-BR') + ' - ' + date.toLocaleTimeString('pt-BR');
-                                                            }
-                                                        },
-                                                        {
-                                                            data: 'ultimo_andamento', render: function (data, type, row) {
-                                                                var date = new Date(data);
-                                                                return date.toLocaleDateString('pt-BR') + ' - ' + date.toLocaleTimeString('pt-BR');
+
+
+                                            var table = $('#processTable').DataTable({
+                                                serverSide: true,
+                                                searching: false,
+                                                lengthChange: false,
+                                                responsive: true,
+
+                                                responsive: {
+                                                    details: {
+                                                        display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                                                        type: ''
+                                                    },
+                                                    breakpoints: [
+                                                        { name: 'desktop', width: Infinity },
+                                                        { name: 'tablet', width: 1024 },
+                                                        { name: 'fablet', width: 768 },
+                                                        { name: 'phone', width: 480 }
+                                                    ],
+                                                    columns: [
+                                                        { responsivePriority: 1, targets: 0 },
+                                                        { responsivePriority: 2, targets: 2 }
+                                                    ]
+                                                },
+
+                                                columnDefs: [
+                                                    {
+                                                        orderable: false,
+                                                        targets: '_all'  // Disables ordering for all columns
+                                                    },
+                                                    {
+                                                        // Apply custom widths if the viewport width is detected as desktop size
+                                                        targets: [0, 1, 2, 3, 4, 5, 6, 7],
+                                                        createdCell: function (td, cellData, rowData, row, col) {
+                                                            if (window.innerWidth >= 1024) {  // Desktop width condition
+                                                                switch (col) {
+                                                                    case 0: $(td).css('width', '50px'); break;
+                                                                    case 1: $(td).css('width', '30px'); break;
+                                                                    case 2: $(td).css({'width': '300px','white-space': 'nowrap'} ); break;
+                                                                    case 3: $(td).css('width', '70px'); break;
+                                                                    case 4: $(td).css('width', '100px'); break;
+                                                                    case 5: $(td).css('width', '150px'); break;
+                                                                    case 6: $(td).css('width', '150px'); break;
+                                                                    case 7: $(td).css('width', '150px'); break;
+                                                                }
                                                             }
                                                         }
-                                                    ],
-                                                    pagingType: "simple_numbers",
-                                                    info: false,  // Hides the "Showing X to Y of Z entries" text
-                                                    dom: "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-12 d-flex justify-content-center'p>>",
-                                                    // columnDefs: [
-                                                    //     { "targets": "_all", "className": "text-nowrap" }
-                                                    // ],
-                                                    // scrollX: true
-                                                    
-                                                     
-                                                
-                                                }
-                                            );
+                                                    }
+                                                ],
+
+                                                ajax: {
+                                                    url: 'assets/processos.json',
+                                                    type: 'GET',
+                                                    data: function (d) {
+                                                        d.search = search;
+                                                        d.status = status;
+                                                        d.origem = origem;
+                                                        d.tribunal = tribunal;
+                                                        delete d.columns;
+                                                    },
+                                                    error: function (xhr, error, code) {
+                                                        console.log("DataTables error:", error, code);
+                                                        console.log("Response:", xhr.responseText);
+                                                    }
+                                                },
+
+                                                language: {
+                                                    url: "assets/js/datatables_pt_br.json"
+                                                },
+
+                                                columns: [
+                                                    { data: null, render: function () { return '<input type="checkbox" id="selectProcess" name="selectProcess">'; } },
+                                                    { data: 'tribunal' },
+                                                    { data: 'processo' },
+                                                    { data: 'monitoracao', render: function (data) { return '<div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="monitoringSwitch1" ' + (data ? 'checked' : '') + '><label class="form-check-label" for="monitoringSwitch1"></label></div>'; } },
+                                                    { data: 'status', render: function (data) { return '<span class="badge rounded-pill bg-' + (data == 'Ativo' ? 'primary' : (data == 'Atualizando' ? 'warning' : 'danger')) + '">' + data + '</span>'; } },
+                                                    { data: 'origem', render: function (data) { return '<img src="assets/img/' + (data === 'Manual' ? 'manual_mini' : 'automatico_mini') + '.png" alt="' + data + ' Icon" width="20" height="20">' + data; } },
+                                                    { data: 'ultima_atualizacao', render: function (data) { var date = new Date(data); return date.toLocaleDateString('pt-BR') + ' - ' + date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); } },
+                                                    { data: 'ultimo_andamento', render: function (data) { var date = new Date(data); return date.toLocaleDateString('pt-BR') + ' - ' + date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); } }
+                                                ],
+
+                                                pagingType: "simple_numbers",
+                                                info: false,
+                                                dom: "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-12 d-flex justify-content-center mt-4 fw-bold'p>>"
+                                            });
+
+
+
+
+
+
 
                                             // Search functionality
                                             $('#filtro_status, #filtro_origem, #filtro_tribunal').on('change keyup', function () {
