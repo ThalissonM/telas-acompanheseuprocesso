@@ -120,24 +120,26 @@
                                             </div>
                                             <div class="col-12 col-lg-8 col-sm-12 mt-5">
                                                 <input type="search" class="form-control me-2"
-                                                        placeholder="Buscar processo" name="search" id="search">
-    
+                                                    placeholder="Buscar processo" name="search" id="search">
+
                                             </div>
                                             <div class="col-12 col-lg-4 col-sm-12 mt-5">
-                                                <button class="btn btn-light" id="search_button" style="width: 100%;">Buscar</button>
+                                                <button class="btn btn-light" id="search_button"
+                                                    style="width: 100%;">Buscar</button>
                                             </div>
 
                                         </div>
-                                        
-                                            
-                                        
+
+
+
                                     </div>
                                     <div class="col-12 col-lg-7 col-sm-12 rounded-4 border align-items-start p-4 mt-3">
                                         <div class="row">
                                             <div class="col col-12 col-md-6 col-lg-6">
                                                 <div class="row">
                                                     <div>
-                                                        <small>Plano </small><span style="color: green; font-size: 1.3rem;">Teste
+                                                        <small>Plano </small><span
+                                                            style="color: green; font-size: 1.3rem;">Teste
                                                             Gratis</span>
                                                     </div>
 
@@ -166,8 +168,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="col-12 col-lg-4 col-sm-12 pt-4">
                                         <label for="filtro_status">Status</label>
                                         <select name="filtro_status" class="form-control" id="filtro_status">
@@ -195,8 +197,8 @@
                                             <option value="Manutenção">Manutenção</option>
                                         </select>
                                     </div>
-                                
-                                
+
+
                                     <div class="col-12 pt-4">
                                         <button class="btn btn-light" id="excluir" style="width: auto;">Excluir <i
                                                 class="fa-regular fa-trash-can"></i></button>
@@ -217,8 +219,10 @@
                                                         <th id="monitoracao">Monitoração</th>
                                                         <th id="status">Status</th>
                                                         <th id="origem">Origem</th>
-                                                        <th id="ultima_atualizacao" style="white-space: nowrap;">Última Atualização</th>
-                                                        <th id="ultimo_andamento" style="white-space: nowrap;">Último Andamento</th>
+                                                        <th id="ultima_atualizacao" style="white-space: nowrap;">Última
+                                                            Atualização</th>
+                                                        <th id="ultimo_andamento" style="white-space: nowrap;">Último
+                                                            Andamento</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -312,8 +316,8 @@
 
                                                 responsive: {
                                                     details: {
-                                                        // display: $.fn.dataTable.Responsive.display.childRowImmediate,
-                                                        // type: ''
+                                                        display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                                                        type: 'column'
                                                     },
                                                     breakpoints: [
                                                         { name: 'desktop', width: Infinity },
@@ -321,10 +325,11 @@
                                                         { name: 'fablet', width: 768 },
                                                         { name: 'phone', width: 480 }
                                                     ],
-                                                    columns: [
-                                                        { responsivePriority: 1, targets: 0 },
-                                                        { responsivePriority: 2, targets: 2 }
-                                                    ]
+                                                    // columns: [
+                                                    //     { responsivePriority: 1, targets: 0 },
+                                                    //     { responsivePriority: 2, targets: 2 }
+                                                    // ]
+                                                    
                                                 },
 
                                                 columnDefs: [
@@ -340,7 +345,7 @@
                                                                 switch (col) {
                                                                     case 0: $(td).css('width', '50px'); break;
                                                                     case 1: $(td).css('width', '30px'); break;
-                                                                    case 2: $(td).css({'width': '300px','white-space': 'nowrap'} ); break;
+                                                                    case 2: $(td).css({ 'width': '300px', 'white-space': 'nowrap' }); break;
                                                                     case 3: $(td).css('width', '70px'); break;
                                                                     case 4: $(td).css('width', '100px'); break;
                                                                     case 5: $(td).css('width', '150px'); break;
@@ -373,9 +378,11 @@
                                                 },
 
                                                 columns: [
-                                                    { data: null, render: function () { return '<input type="checkbox" id="selectProcess" name="selectProcess">'; } },
+                                                    { data: null, 
+                                                        render: function () { return '<input type="checkbox" id="selectProcess" name="selectProcess">'; } ,
+                                                        responsivePriority: 1},
                                                     { data: 'tribunal' },
-                                                    { data: 'processo' },
+                                                    { data: 'processo', responsivePriority: 2},
                                                     { data: 'monitoracao', render: function (data) { return '<div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="monitoringSwitch1" ' + (data ? 'checked' : '') + '><label class="form-check-label" for="monitoringSwitch1"></label></div>'; } },
                                                     { data: 'status', render: function (data) { return '<span class="badge rounded-pill bg-' + (data == 'Ativo' ? 'primary' : (data == 'Atualizando' ? 'warning' : 'danger')) + '">' + data + '</span>'; } },
                                                     { data: 'origem', render: function (data) { return '<img src="assets/img/' + (data === 'Manual' ? 'manual_mini' : 'automatico_mini') + '.png" alt="' + data + ' Icon" width="20" height="20">' + data; } },
