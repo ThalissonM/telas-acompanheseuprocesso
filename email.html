@@ -1,65 +1,277 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- email in html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
     <style>
-       /* Add custom classes and styles that you want inlined here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* .content {
+            padding: 20px;
+            line-height: 1.6;
+        } */
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
     </style>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body class="bg-light">
-    <div class="container mt-5 rounded">
-      <div class="card my-10">
-        <div class="card-body text-center">
-          <img src="assets/img/logo_short.png" class="mb-4" alt="">
-          <br>
-        <img src="assets/img/banner620x90.png" alt="Banner" width="620" height="90" class="img-fluid mb-4">
-          
-        <a href="#" style="text-decoration: none;">
-            <div class="col-3 rounded border text-center text-black">
-                <div class="row">
-                    <div class="col-4 d-flex  justify-content-center align-items-center">
-                        <img src="assets/img/doc.png" height="70%" alt="">
-                    </div>
-                    <div class="col-8">
-                        Exportar para doc
-                    </div>
-                </div>
-                
-              </div>
-        </a>
-        <a href="#" style="text-decoration: none;">
-            <div class="col-3 rounded border text-center text-black">
-                <div class="row">
-                    <div class="col-4 d-flex  justify-content-center align-items-center">
-                        <img src="assets/img/doc.png" height="70%" alt="">
-                    </div>
-                    <div class="col-8">
-                        Exportar para doc
-                    </div>
-                </div>
-                
-              </div>
-        </a>
-          
-          <div class="space-y-3">
-            <p class="text-gray-700">Click the "Render" button at the top of the page every time you want to rebuild the email.</p>
-            <p class="text-gray-700">
-              We hope you enjoy using Bootstrap Email. This is our Online Editor that allows you to edit emails
-              and have them render directly in the browser. The outputted HTML will be in the "HTML" tab in the top
-              and that is the HTML you want to use to send emails. All the styles and responsive CSS are self contained in the
-              HTML that is generated making is very portable needing no external CSS files.
-            </p>
-            <p class="text-gray-700">
-              You can use the "Test" button to email yourself the outputted code to test in your inbox and email client.
-            </p>
-            <p class="text-gray-700">
-              Check out the <a href="https://bootstrapemail.com/docs/introduction" target="_blank">Documentation</a> for syntax and usage of writing emails with Bootstrap Email.
-            </p>
-          </div>
-          <hr>
-          <a class="btn btn-primary" href="https://app.bootstrapemail.com/templates" target="_blank">Get More Email Templates</a>
+</head>
+
+<body>
+    <div class="container" style="width: 100%;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;">
+
+        <div class="header" style="text-align: center;
+        padding: 10px 0;
+        /* background-color: #007bff; */
+        color: #ffffff;">
+            <img src="assets/img/logo_short.png" alt=""
+                style="max-width: 100%; height: auto;">
         </div>
-      </div>
+        <div class="header" style="text-align: center;
+        padding: 10px 0;
+        /* background-color: #007bff; */
+        color: #ffffff;">
+            <img src="assets/img/banner620x90.png" alt=""
+                style="max-width: 100%; height: auto;">
+        </div>
+        <div style="display: flex; justify-content: center; padding: 20px; gap: 15px; flex-wrap: nowrap;">
+            <a href="#"
+                style="text-decoration: none; border: 1px solid #ddd; border-radius: 10px; padding: 15px; width: 120px; text-align: center;">
+                <img src="assets/img/exp-doc.png" alt="Icon 1" style="max-width: 100%; height: auto;">
+            </a>
+            <a href="#"
+                style="text-decoration: none; border: 1px solid #ddd; border-radius: 10px; padding: 15px; width: 120px; text-align: center;">
+                <img src="assets/img/exp-txt.png" alt="Icon 2" style="max-width: 100%; height: auto;">
+            </a>
+            <a href="#"
+                style="text-decoration: none; border: 1px solid #ddd; border-radius: 10px; padding: 15px; width: 120px; text-align: center;">
+                <img src="assets/img/exp-pdf.png" alt="Icon 3" style="max-width: 100%; height: auto;">
+            </a>
+            <a href="#"
+                style="text-decoration: none; border: 1px solid #ddd; border-radius: 10px; padding: 15px; width: 120px; text-align: center;">
+                <img src="assets/img/exp-print.png" alt="Icon 4" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
+        <div class="content">
+            <div style="margin: 1rem; padding: 1rem; position: relative; display: flex; align-items: flex-start;">
+                <div style="width: 100%; border: 1px solid #dee2e6; border-radius: 0.5rem;">
+                    <div
+                        style="background-color: #F1F1F1; padding: 1rem; border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div>
+                                Processo n° <strong>5026088-46.2024.8.21.0015</strong>
+                                <span
+                                    style="background-color: #8139FF; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em;">1ª
+                                    instância</span>
+                                <span
+                                    style="background-color: #F39100; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em;">2ª
+                                    instância</span>
+                                <br>
+                                <small>Tribunal de Justiça do Rio Grande do Sul - 1ª instância - Juízo da 2ª Vara Cível
+                                    e Juizado da Infanci e Juventude da Comarca de Gravataí</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="padding: 1rem; border-bottom: 1px solid #dee2e6; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Exequente</strong><br>
+                            Nome do Exequente
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Executado</strong><br>
+                            Nome do Executado
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Interessado</strong><br>
+                            Nome do Interessado
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Advogado do Exequente</strong><br>
+                            Nome do Advogado Exequente
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Advogado do Executado</strong><br>
+                            Nome do Advogado Executado
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Advogado do Interessado</strong><br>
+                            Nome do Advogado Interessado
+                        </div>
+                    </div>
+
+                    <div
+                        style="padding: 1rem; border-bottom: 1px solid #dee2e6; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Comarca</strong><br>
+                            Gravataí
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Atuação</strong><br>
+                            25/09/2024
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Corgão Julgador</strong><br>
+                            Juízo da 2ª Vara Cível e Juizado da Infanci e Juventude da comarca de Gravataí
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Assuntos</strong><br>
+                            DIREITO CIVIL<br>
+                            Empreitada<br>
+                            Espécies de contratos<br>
+                            Obrigações
+                        </div>
+                    </div>
+
+                    <div
+                        style="padding: 1rem; margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                        <h5 style="margin: 0;">Atendimentos Recentes</h5>
+                        <span>Ultima Atualização 23/10/2024 às 17:04:59</span>
+                    </div>
+
+                    <div style="padding: 1rem; margin-bottom: 3rem;">
+                        <div style="overflow-x: auto;">
+                            <table
+                                style="width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden;">
+                                <thead style="background-color: #e2e3e5;">
+                                    <tr style="padding-left: 5px;">
+                                        <th style="padding: 0.5rem; text-align: left;">Evento</th>
+                                        <th style="padding: 0.5rem; text-align: left;">Data/Hora</th>
+                                        <th style="padding: 0.5rem; text-align: left;">Descrição</th>
+
+                                        <th style="padding: 0.5rem; text-align: left;">Documentos</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color: #F9F9F9;">
+                                    <tr style="border-bottom: 1px solid #e2e3e5;">
+                                        <td style="padding-left: 5px;">123</td>
+                                        <td>01/01/2024 10:00</td>
+                                        <td>Descrição do evento 1</td>
+
+                                        <td style="padding-bottom: 5px; padding-top: 5px;">
+                                            <span
+                                                style="background-color: #487AFB; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em; margin-top: 5px; display: inline-block;">LAUDO
+                                                1</span>
+                                            <span
+                                                style="background-color: #487AFB; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em; margin-top: 5px; display: inline-block;">PET2</span>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e2e3e5;">
+                                        <td style="padding-left: 5px;">124</td>
+                                        <td>02/01/2024 11:00</td>
+                                        <td>Confirmada a intimação eletronica Ref. ao Evento 115 (Perito Judicial) -
+                                            Data da ciência: 01/01/2020</td>
+
+                                        <td>
+
+
+
+
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e2e3e5;">
+                                        <td style="padding-left: 5px;">125</td>
+                                        <td>03/01/2024 12:00</td>
+                                        <td>Descrição do evento 3</td>
+
+                                        <td>
+
+                                            <span
+                                                style="background-color: #487AFB; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em; margin-top: 5px; display: inline-block;">PET2</span>
+
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 5px;">125</td>
+                                        <td>03/01/2024 12:00</td>
+                                        <td>Descrição do evento 3</td>
+
+                                        <td>
+
+                                            <span
+                                                style="background-color: #487AFB; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em; margin-top: 5px; display: inline-block;">PET2</span>
+                                            <span
+                                                style="background-color: #487AFB; color: white; padding: 0.35em 0.65em; border-radius: 50rem; font-size: 0.75em; margin-top: 5px; display: inline-block;">LAUDO1</span>
+
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+                        <a href="#"
+                            style="display: inline-block; padding: 10px 20px; background-color: #FFFFFF; color: #333; text-decoration: none; border: 1px solid #333; border-radius: 50px;">
+                            Ver todos os andamentos deste processo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <h2 style="font-weight: bold;">Dúvidas ou sugestões?</h2>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Entre em contato com a nossa <a href="#"
+                        style="display: inline-block; padding: 10px 20px; background-color: #FFFFFF; color: #333; text-decoration: none; border: 1px solid #333; border-radius: 50px;">Central
+                        de relacionamento</a></p>
+            </div>
+        </div>
+
     </div>
-  </body>
+    <div class="footer" style="width: 100%;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    padding: 20px;">
+        <div style="margin: 1rem; padding: 1rem; position: relative; display: flex; align-items: flex-start;">
+            <img src="assets/img/logo_agile.png" alt="Logo"
+                style="max-width: 100px; height: auto;">
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <div style="width: 70%; text-align: left;">
+                <p>&copy; Agile Serviços para Advogados. Todos os direitos reservados. <a href="#"
+                        style="text-decoration: none; font-weight: bold; color: black;">Termos de Uso</a> | <a href="#"
+                        style="text-decoration: none; font-weight: bold; color: black;">Política de Privacidade</a></p>
+                <p>Se você nao quiser mais receber nossos e-mails, é só <a href="#"
+                        style="text-decoration: none; font-weight: bold; color: black;">clicar aqui</a></p>
+            </div>
+            <div style="width: 30%; text-align: right;">
+                <a href="#"><img src="assets/svg/insta_black.svg"
+                        alt="Instagram" style="width: 24px; height: 24px; margin-left: 10px;"></a>
+                <a href="#"><img src="assets/svg/facebook_black.svg"
+                        alt="Facebook" style="width: 24px; height: 24px; margin-left: 10px;"></a>
+                <a href="#"><img src="assets/svg/youtube_black.svg"
+                        alt="YouTube" style="width: 24px; height: 24px; margin-left: 10px;"></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
 </html>
